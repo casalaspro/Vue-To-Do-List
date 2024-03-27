@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/app.css">
   <title>To Vue List</title>
 </head>
 <body>
@@ -23,7 +24,7 @@
             </div>
             <div class="card-body">
               <ul>
-                <li></li>
+                <li v-for="(element, i) in todo" :class="{done : element.done}">{{element.text}}<button class="button">&cross;</button></li>
               </ul>
             </div>
           </div>
