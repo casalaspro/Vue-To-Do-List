@@ -28,7 +28,8 @@ createApp({
           text: "Mostrare un sorriso smagliante",
           done: false,
         },
-      ]
+      ],
+      textInput: "",
     }
   },
 
