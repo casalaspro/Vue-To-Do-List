@@ -36,6 +36,14 @@ createApp({
   methods: {
     removeTodo(i){
       this.todo.splice(i, 1);
+    },
+    saveTodo(){
+      const newTodo = {
+        text: this.textInput,
+        done: false,
+      }
+      this.todo.push(newTodo);
     }
   },
+  
 }).mount('#app');
