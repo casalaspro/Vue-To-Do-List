@@ -33,6 +33,8 @@ createApp({
   },
 
   methods: {
-
+    removeTodo(i){
+      this.todo.splice(i, 1);
+    }
   },
 }).mount('#app');
