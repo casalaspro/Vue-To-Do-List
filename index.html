@@ -20,7 +20,14 @@
         <div class="container">
           <div class="card">
             <div class="card-header">
-              <input v-model="textInput" type="text" name="todoItem" id="todoItem" placeholder="Scrivi qui..."><button @click="saveTodo">Salva</button>
+              <input
+              @keyup.enter="saveTodo"
+              v-model.trim="textInput"
+              type="text" name="todoItem"
+              id="todoItem"
+              placeholder="Scrivi qui..."
+              >
+              <button @click="saveTodo">Salva</button>
               <p>{{textInput}}</p>
             </div>
             <div class="card-body">

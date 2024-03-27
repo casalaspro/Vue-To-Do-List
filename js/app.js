@@ -38,11 +38,16 @@ createApp({
       this.todo.splice(i, 1);
     },
     saveTodo(){
-      const newTodo = {
-        text: this.textInput,
-        done: false,
+      if(this.textInput !== ""){
+        const newTodo = {
+          text: this.textInput,
+          done: false,
+        }
+        this.todo.push(newTodo);
+        console.log(this.todo)
       }
-      this.todo.push(newTodo);
+      
+      this.textInput = "";
     }
   },
   
