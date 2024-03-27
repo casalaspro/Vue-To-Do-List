@@ -32,7 +32,7 @@
             </div>
             <div class="card-body">
               <ul>
-                <li v-for="(element, i) in todo" :class="{done : element.done}">{{element.text}}<button @click="removeTodo(i)" class="button">&cross;</button></li>
+                <li  v-for="(element, i) in todo" :class="{done : element.done}"><span @click="element.done = !element.done">{{element.text}}</span><button @click="removeTodo(i)" class="button">&cross;</button></li>
               </ul>
             </div>
           </div>
