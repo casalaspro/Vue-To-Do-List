@@ -79,6 +79,16 @@ textarea:focus, input:focus{
   padding-right: 20px;
   text-decoration: none;
 }
+
+i.rotation_hover{
+  transform: rotate(0);
+  transition: 0.3s;
+}
+
+
+i.rotation_hover:hover{
+  transform: rotate(90deg);
+}
 /* i{
   color: black;
 } */
