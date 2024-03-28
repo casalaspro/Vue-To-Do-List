@@ -12,8 +12,48 @@ html{
 
 .container{
   max-width: 500px;
-  border: 1px solid black;
   margin: 0 auto;
+}
+
+body{
+  height: 100vh;
+  background: rgb(238,174,202);
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.logo {
+  text-align: center;
+  font-size: xxx-large;
+  font-weight: BOLD;
+  color: white;
+  margin: 40px 0;
+}
+
+.card{
+  padding: 20px;
+  border-radius: 15px ;
+  background-color: rgba(255, 255, 255, 0.414);
+  box-shadow: 10px 10px 30px #627997;
+}
+
+.card-body{
+  margin: -20px;
+}
+
+.card-body li{
+  padding: 20px 0;
+  border-top: 1px solid #62799750;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-body li:hover{
+  background-color: #9BBAE7;
+}
+
+.card-body li span{
+  margin-left: 40px;
 }
 
 input{
@@ -22,13 +62,32 @@ input{
   margin: 10px 10px;
   border-radius: 1000px 1000px;
   border: none;
-  background-color: rgb(225, 225, 225);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 10px 10px 30px #62799769;
 }
 
-.card-input{
-  margin: 0 auto;
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.card-body li div.button{
+  width: 15px;
+  aspect-ratio: 1/1;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+  text-decoration: none;
+}
+/* i{
+  color: black;
+} */
+
+.card-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 li, ul, menu{

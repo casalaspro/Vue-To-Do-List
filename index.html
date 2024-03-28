@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <link rel="stylesheet" href="./css/app.css">
+  <script src="https://kit.fontawesome.com/04b1244ecb.js" crossorigin="anonymous"></script>
   <title>To Vue List</title>
 </head>
 <body>
@@ -11,7 +13,7 @@
   <div id="app">
     <header>
       <nav>
-        <div class="logo">To Vue List</div>
+        <div class="logo">TO DO LIST</div>
       </nav>
     </header>
 
@@ -28,13 +30,17 @@
                 id="todoItem"
                 placeholder="Scrivi qui..."
                 >
-                <button @click="saveTodo">Salva</button>
+                <div @click="saveTodo"><i class="fa-solid fa-plus"></i></div>
               </div>
-              <p>{{textInput}}</p>
             </div>
             <div class="card-body">
               <ul>
-                <li  v-for="(element, i) in todo" :class="{done : element.done}"><span @click="element.done = !element.done">{{element.text}}</span><button @click="removeTodo(i)" class="button">&cross;</button></li>
+                <li  v-for="(element, i) in todo" :class="{done : element.done}">
+                  <span @click="element.done = !element.done">{{element.text}}</span>
+                  <div @click="removeTodo(i)" class="button">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -43,9 +49,11 @@
     </main>
   </div>
 
-  <script src="https://kit.fontawesome.com/04b1244ecb.js" crossorigin="anonymous"></script>
+
+
+  
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="./js/app.js"></script>
-
+  
 </body>
 </html>
