@@ -35,8 +35,8 @@
             </div>
             <div class="card-body">
               <ul>
-                <li  v-for="(element, i) in todo" :class="{done : element.done}">
-                  <span @click="element.done = !element.done">{{element.text}}</span>
+                <li  v-for="(element, i) in todo" >
+                  <span :class="{done : element.done}" @click="element.done = !element.done">{{element.text}}</span>
                   <div @click="removeTodo(i)" class="button">
                     <i class="fa-solid fa-xmark"></i>
                   </div>
